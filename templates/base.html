@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almikeno</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+    <!-- 010001100110111101110010001000000100101001100001011011100110100100100000011000110111010101111010001000000110100001100101001001110111001100100000011100110110100101101101011100000110110001111001001000000111010001101000011001010010000001100010011001010111001101110100001000000011110000110011 -->
+</head>
+<body>
+    <header>
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <a href="/" class="navbar-brand">Almikeno</a>
+                 <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-left post-formation">
+                    <img src="/img/pencil_icon.png" class="post-text-button post-button" style="margin-right:10px;">
+                    <img src="/img/camera_icon.png" class="post-image-button post-button" style="height:42px;">
+                </div> 
+                <div class="collapse navbar-collapse navHeaderCollapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="new-text-post-container">
+            <div class="new-post">
+                <h2 style="margin:0px;">New text post</h2>
+                <hr>
+                <div class="new-text-post">
+                    <form name="text-post" method="post">
+                        <input type="text" name="text-post-title" placeholder="Title (optional)" class="form-control post-title-input">
+                        <textarea name="text-post-content" placeholder="Content" class="form-control text-post-content-input" style="height:100px;"></textarea>
+                        <input type="submit" class="btn btn-submit" name="submit_text_post">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="new-image-post-container">
+            <div class="new-post">
+                <h2 style="margin:0px;">New image post</h2>
+                <hr>
+                <div class="new-image-post">
+                    <form name="image-post" method="post">
+                        <input type="text" name="image-post-title" placeholder="Title" class="form-control post-title-input">
+                        <input type="url" name="image-post-url" placeholder="Insert image URL here..." class="form-control image-post-url-input">
+                        <input type="submit" class="btn btn-submit" name="submit_image_post">
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        {% block content %}
+
+        {% endblock %}
+        
+    </div>
+    
+    <!--<footer>
+        <div class="container">
+            
+        </div>
+    </footer>-->
+</body>
+</html>

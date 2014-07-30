@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for post in posts %}
+    <div class="post">
+                <div class="post-header">
+                    {% if post.text_title %}
+                    <span class="post-title">{{ post.text_title }}</span>
+                    <hr>
+                    {% elif post.image_title  %}
+                    <span class="post-title">{{ post.image_title }}</span>
+                    <hr>
+                    {% else %}
+                    <span class="post-title" style="display:none;"></span>
+                    {% endif %}
+                </div>
+                <div class="post-content">
+                    {% if post.text_content %}
+                    {{ post.text_content }}
+                    {% else %}
+                    <div class="nista" style="display:none;"></div>
+                    {% endif %}
+                    {% if post.image_url %}
+                    <img src="{{ post.image_url }}" />
+                    {% else %}
+                    <img src="nemaslike" style="display:none;">
+                    {% endif %}
+                </div>
+        </div>
+
+{% endfor %}
+
+{% endblock %}
